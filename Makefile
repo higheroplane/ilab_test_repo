@@ -1,18 +1,14 @@
-CC=gcc
-CFLAGS=-c -Wall -O3
+CC=g++
+CFLAGS=-c -Wall -O3 -std=c++17
 
-all: main.o hello.o factorial.o
-	$(CC) main.o factorial.o hello.o -o hello 
+all: mmm aaa
+	$(CC) main.o array.o -o main
 
-main.o: main.cpp
+mmm: main.cpp
 	$(CC) $(CFLAGS) main.cpp
 
-hello.o: hello_src/hello.cpp
-	$(CC) $(CFLAGS) hello_src/hello.cpp
-
-factorial.o: factorial.cpp
-	$(CC) $(CFLAGS) factorial.cpp
-
+aaa: array.cpp
+	$(CC) $(CFLAGS) array.cpp
 
 cr: all
 	./hello
@@ -24,4 +20,4 @@ vim:
 	vim main.cpp
 
 clean:
-	rm -rf *.o hello
+	rm -rf *.o main
