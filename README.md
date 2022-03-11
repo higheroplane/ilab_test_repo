@@ -11,7 +11,7 @@ For usage:
 
 ```
 git clone https://github.com/higheroplane/ilab_test_repo.git
-git chechout array
+git checkout array
 cd ilab_test_repo
 make
 ./main
